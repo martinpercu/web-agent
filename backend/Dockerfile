@@ -3,8 +3,8 @@ FROM node:20-alpine
 RUN npm install -g opencode-ai
 
 WORKDIR /app
-COPY opencode.json ./
-COPY INSTRUCTIONS.md ./
+COPY backend/opencode.json ./
+COPY backend/INSTRUCTIONS.md ./
 
 EXPOSE 4096
 
