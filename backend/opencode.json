@@ -1,0 +1,39 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "enabled_providers": ["opencode", "opencode-go"],
+  "provider": {
+    "opencode": {
+      "whitelist": ["deepseek-v4-flash-free", "hy3-free", "nemotron-3.5-lightning-free"]
+    },
+    "opencode-go": {
+      "whitelist": ["mimo-v2.5"]
+    }
+  },
+  "model": "opencode/deepseek-v4-flash-free",
+  "small_model": "opencode/deepseek-v4-flash-free",
+  "tools": {
+    "bash": false,
+    "edit": false,
+    "write": false,
+    "read": false,
+    "grep": false,
+    "glob": false,
+    "apply_patch": false,
+    "lsp": false,
+    "skill": false,
+    "todowrite": false,
+    "webfetch": false,
+    "websearch": false,
+    "question": false
+  },
+  "permission": { "*": "deny" },
+  "instructions": ["INSTRUCTIONS.md"],
+  "server": {
+    "port": 4096,
+    "hostname": "0.0.0.0",
+    "cors": ["http://localhost:3022", "{env:FRONTEND_URL}"]
+  },
+  "autoupdate": false,
+  "share": "disabled",
+  "snapshot": false
+}
